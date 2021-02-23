@@ -2,8 +2,10 @@
   "compilerOptions": {
     "module": "commonJS",
     "target": "es2015",
+    "jsx": "react",
     "baseUrl": "./",
-    "paths": { "~/*": ["src/*"] }
+    "paths": { "~/*": ["src/*"] },
+    "esModuleInterop": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

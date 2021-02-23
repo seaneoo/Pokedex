@@ -3,13 +3,13 @@ const dist = path.resolve(__dirname, "dist");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/index.js"),
+  entry: path.resolve(__dirname, "src/index.ts"),
   output: { filename: "bundle.js", path: dist },
 
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|ts)x?$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
@@ -25,7 +25,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
     alias: {
       "~": path.resolve(__dirname, "src/"),
     },
