@@ -1,0 +1,12 @@
+{
+  "name": "pokedex",
+  "version": "2021.1",
+  "description": "Minimalist and informative Pokédex SPA",
+  "author": "Sean O'Connor <so@seano.dev> (https://seano.dev/)",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
