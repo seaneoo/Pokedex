@@ -21,6 +21,9 @@ module.exports = {
       template: path.resolve(__dirname, "public/index.html"),
       hash: true,
       scriptLoading: "defer",
+      minify: {
+        removeComments: true,
+      },
     }),
   ],
 
