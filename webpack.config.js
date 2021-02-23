@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/index.ts"),
-  output: { filename: "bundle.js", path: dist },
+  output: { filename: "bundle.js", path: dist, publicPath: "/" },
 
   module: {
     rules: [
@@ -38,5 +38,6 @@ module.exports = {
     contentBase: dist,
     compress: true,
     port: 3000,
+    historyApiFallback: true,
   },
 };
