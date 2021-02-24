@@ -1,6 +1,7 @@
 const path = require("path");
 const dist = path.resolve(__dirname, "dist");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/index.ts"),
@@ -13,6 +14,11 @@ module.exports = {
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
     ],
   },
 
@@ -24,6 +30,10 @@ module.exports = {
       minify: {
         removeComments: true,
       },
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css",
     }),
   ],
 
